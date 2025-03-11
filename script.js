@@ -186,3 +186,36 @@ function createUser(username, email, password) {
 }
 let user1 = new createUser("asimar007", "fb@gmail.com", "12345");
 console.log(user1);
+
+//? Apply
+
+//Example-1
+function test1(age) {
+    console.log(`${this.title} ${this.name} is ${age} years old`);
+}
+let obj21 = {
+    title: "Mr.",
+    name: "Asim"
+};
+
+test1.apply(obj21, [25]);
+
+//Example-2 Modern alternative Spread Operator
+
+let arr11 = [1, 2, 3, 4, 5, 11];
+const max = Math.max(...arr11);
+console.log(arr11);
+console.log(max);
+
+//? Bind
+
+//Example-1
+let data = {
+    name: 'Asim',
+}
+function asim1(age) {
+    console.log(this.name, age);
+}
+let ans = asim1.bind(data, 25);
+ans();
+
